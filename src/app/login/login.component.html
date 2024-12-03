@@ -1,6 +1,6 @@
 <div class="login-page">
     <h2>Login</h2>
-    <form (ngSubmit)="onLogin()">
+    <form (ngSubmit)="onLogin($event)">
         <label for="username">Username:</label>
         <input id="username" type="text" [(ngModel)]="username" name="user name" required />
 

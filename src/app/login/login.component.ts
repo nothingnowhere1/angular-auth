@@ -15,9 +15,10 @@ export class LoginComponent {
 
 	constructor(private router: Router) {}
 
-	onLogin() {
+	onLogin(e: Event) {
+		e.preventDefault();
 		if (this.username !== '' && this.password === '111') {
-			this.router.navigate(['/main']);
+			void this.router.navigate(['/main']);
 		} else {
 			this.errorMessage = 'Invalid username or password.';
 		}
